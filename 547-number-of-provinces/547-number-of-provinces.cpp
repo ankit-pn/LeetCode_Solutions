@@ -23,7 +23,7 @@ public:
         for(int j=0;j<n;j++){
             if(isConnected[i][j]==1 && check[j]==0){
             dfs(isConnected,check,j);
-                check[j]=1;
+                // check[j]=1;
             }
         }
     }
