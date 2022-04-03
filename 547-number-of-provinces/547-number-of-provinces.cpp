@@ -16,13 +16,14 @@ public:
         return ans;
     }
     void dfs(vector<vector<int>>& isConnected, vector<int>& check,int i){
-        if(check[i])
-            return ;
+        // if(check[i])
+        //     return ;
         int n=isConnected.size();
-        check[i]=1;
         for(int j=0;j<n;j++){
             if(isConnected[i][j]==1 && check[j]==0){
+                            check[j]=1;
             dfs(isConnected,check,j);
+
             }
         }
     }
