@@ -8,6 +8,8 @@ public:
         return ans;
     }
     int dfs_max(vector<int> &manager,vector<int> &informTime, int i){
+        if(manager[i]==-1)
+            return informTime[i];
         if(manager[i]!=-1){
             // return informTime[i];
         // else{
