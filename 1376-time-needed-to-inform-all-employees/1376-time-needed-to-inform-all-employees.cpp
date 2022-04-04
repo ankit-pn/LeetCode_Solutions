@@ -14,7 +14,8 @@ public:
          
             informTime[i]+=dfs_max(manager,informTime,manager[i]);
             manager[i]=-1;
+            return informTime[i];
         }
- return informTime[i];
+        
     }
 };
