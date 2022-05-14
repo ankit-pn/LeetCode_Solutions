@@ -15,6 +15,7 @@ public:
                     i=dp[i-1];
                 else
                     j++;
+                // see why j++
             }    
         }
         return s.substr(0,dp[n-1]);
