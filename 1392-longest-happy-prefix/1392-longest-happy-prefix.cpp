@@ -17,8 +17,6 @@ public:
                     j++;
             }    
         }
-        for(auto it:dp)
-            cout<<it<<" ";
         return s.substr(0,dp[n-1]);
     }
 };
