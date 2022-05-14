@@ -11,7 +11,7 @@ public:
                 j++;
             }
             else{
-                if(i!=0)
+                if(i>0)
                     i=dp[i-1];
                 else
                     j++;
