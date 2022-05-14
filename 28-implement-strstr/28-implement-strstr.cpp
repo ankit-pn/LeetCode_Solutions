@@ -34,11 +34,8 @@ public:
                 j=ls[j]-1;
                 else
                 i++;
-                
                 c=j+1;
-               
             }
-            cout<<c<<" ";
         }
         if(f)
             return i-n+1;
