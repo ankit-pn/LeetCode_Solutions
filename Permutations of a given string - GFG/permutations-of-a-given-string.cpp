@@ -10,9 +10,9 @@ class Solution
 		{
 		    vector<string> ans;
 		    int i=0;
-		    sort(S.begin(),S.end());
+		  //  sort(S.begin(),S.end());
 		   help(i,S,ans);
-		   sort(ans.begin(),ans.end());
+		  sort(ans.begin(),ans.end());
 		   return ans;
 		}
 		void help(int i,string s,vector<string> &ans){
