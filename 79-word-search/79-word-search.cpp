@@ -13,7 +13,6 @@ public:
             // cout<<"hrgr";
             for(int j=0;j<m;j++){
                 if(helper(arr,word,i,j,0,v)){
-                    cout<<i<<" "<<j;
                     return 1;
                 }
             }
