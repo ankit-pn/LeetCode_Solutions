@@ -12,14 +12,12 @@ public:
         ListNode *slow=head;
         ListNode *fast=head;
         do {
-            if(slow && slow->next)
-            slow = slow->next;
+              if(slow && slow->next)
+                slow=slow->next;
             else
                 return 0;
-            if(fast && fast->next)
-            fast = fast->next;
-            if(fast && fast->next)
-            fast = fast->next;
+            if(fast && fast->next && fast->next->next)
+                fast=fast->next->next;
             else
                 return 0;
             
