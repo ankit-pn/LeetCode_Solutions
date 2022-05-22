@@ -23,7 +23,7 @@ public:
         }
         c1=0,c2=0;
         vector<int> ans;
-        cout<<m1<<" "<<m2<<"\n";
+        // cout<<m1<<" "<<m2<<"\n";
         for(auto it:nums){
             if(it==m1)
                 c1++;
