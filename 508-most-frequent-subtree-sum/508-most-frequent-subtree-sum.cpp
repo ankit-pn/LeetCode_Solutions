@@ -10,7 +10,7 @@
  * };
  */
 class Solution {
-    map<TreeNode*,int> ss; 
+    unordered_map<TreeNode*,int> ss; 
 public:
     vector<int> findFrequentTreeSum(TreeNode* root) {
         int x=sum(root);
