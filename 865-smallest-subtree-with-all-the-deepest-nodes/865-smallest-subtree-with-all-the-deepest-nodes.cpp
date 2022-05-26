@@ -11,17 +11,18 @@
  */
 class Solution {
 public:
-    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-        if(root==NULL || root==p || root==q)
+    TreeNode* lca(TreeNode* root, TreeNode* p, TreeNode* q) {
+       if(!root || p==root || q==root)
+           return root;
+        auto it=lca(root->left,p,q);
+        auto it1=lca(root->right,p,q);
+        if(!it)
+            return it1;
+        if(!it1)
+            return it;
+        else
             return root;
-        auto l1=lowestCommonAncestor(root->left,p,q);
-         auto l2=lowestCommonAncestor(root->right,p,q);
-        if(l2==NULL)
-            return l1;
-        else if(l1==NULL)
-            return l2;
-        else 
-        return root;
+            
     }
     TreeNode* subtreeWithAllDeepest(TreeNode* root) {
         vector<TreeNode*> ans(2);
@@ -43,6 +44,6 @@ public:
             }
         }
         return 
-        lowestCommonAncestor(root,ans[0],ans[1]);
+        lca(root,ans[0],ans[1]);
     }
 };
