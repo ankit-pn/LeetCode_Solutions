@@ -22,10 +22,25 @@ public:
                 if(a!=b)
                 parent[a]=b;
             }
-            else{
-                if(a==b)
+            // else{
+            //     if(a==b)
+            //         return 0;
+            // }
+        }
+           for(int i=0;i<n;i++){
+            // cout<<arr[i]<<"\n";
+            int a=find(arr[i][0]-'a',parent);
+            int b=find(arr[i][3]-'a',parent);
+            // cout<<char(a+'a')<<"hrr"<<char(b+'b')<<"\n";
+            string s=arr[i].substr(1,2);
+            if(s!="=="){
+              if(a==b)
                     return 0;
             }
+            // else{
+            //     if(a==b)
+            //         return 0;
+            // }
         }
         return 1;
     }
