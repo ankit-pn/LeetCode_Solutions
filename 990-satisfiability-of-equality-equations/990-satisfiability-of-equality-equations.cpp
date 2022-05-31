@@ -8,7 +8,7 @@ public:
     }
     bool equationsPossible(vector<string>& arr) {
         int n=arr.size();
-        sort(arr.begin(),arr.end(),cpm);
+        // sort(arr.begin(),arr.end(),cpm);
         vector<int> parent(26,0);
         for(int i=0;i<26;i++)
             parent[i]=i;
