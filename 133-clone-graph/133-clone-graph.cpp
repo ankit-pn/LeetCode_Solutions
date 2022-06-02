@@ -22,7 +22,7 @@ public:
 class Solution {
 public:
     // error at possition where u have to pass by reference
-    Node* dfs(Node* node,map<Node*,Node*> &mp){
+    Node* dfs(Node* node,unordered_map<Node*,Node*> &mp){
         Node* ans=new Node(node->val);
         auto t=node->neighbors;
         vector<Node*> nng;
@@ -37,7 +37,7 @@ public:
         return ans;
     }
     Node* cloneGraph(Node* node) {
-        map<Node*,Node*> mp;
+        unordered_map<Node*,Node*> mp;
         if(!node)
             return NULL;
         if((node->neighbors).size()==0){
