@@ -16,10 +16,10 @@ public:
         dp[1]=2;
         cout<<dp[1];
         for(int i=2;i<n;i++){
-            string temp="";
-            temp+=s[i-1];
-            temp+=s[i];
-            int x=stoi(temp);
+            // string temp="";
+            // temp+=s[i-1];
+            // temp+=s[i];
+            // int x=stoi(temp);
             if(s[i]=='0' && s[i-1]=='0')
                 return 0;
             else if(s[i]=='0' && s[i-1]>'2')
@@ -28,7 +28,7 @@ public:
                 dp[i]=dp[i-2];
             else if(s[i-1]=='0')
                 dp[i]=dp[i-1];
-            else if(x<=26)
+            else if(!(s[i-1]>'2' || (s[i-1]=='2' && s[i]>'6')))
                 dp[i]=dp[i-1]+dp[i-2];
             else
                 dp[i]=dp[i-1];
