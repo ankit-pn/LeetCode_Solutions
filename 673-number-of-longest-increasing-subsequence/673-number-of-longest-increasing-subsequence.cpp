@@ -24,14 +24,7 @@ public:
                 cp[i]=max(c1,1);
                 dp[i]=1+mx;
         }
-        // for(auto it:dp)
-        //     cout<<it<<" ";
-        // cout<<"\n";
-        //  for(auto it:cp)
-        //     cout<<it<<" ";
         int y=*max_element(dp.begin(),dp.end());
-        cout<<y;
-        int c=0;
         // this question has much mre modf.
         int sum=0;
         for(int i=0;i<n;i++)
