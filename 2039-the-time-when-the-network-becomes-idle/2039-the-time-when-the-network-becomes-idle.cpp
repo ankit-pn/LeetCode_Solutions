@@ -12,8 +12,8 @@ public:
         vector<int> v(n,0);
         bfs(g,dist,v);
         int ans=-1;
-        for(int i=0;i<n;i++)
-            cout<<dist[i]<<" ";
+        // for(int i=0;i<n;i++)
+        //     cout<<dist[i]<<" ";
         // well expected your formula is not correct.
         // may be your formula is correct.......
          for(int i=1;i<n;i++){
