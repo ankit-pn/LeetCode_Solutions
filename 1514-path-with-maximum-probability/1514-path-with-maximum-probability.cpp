@@ -13,25 +13,23 @@ public:
         }
         queue<int> q;
         q.push(start);
-        vector<int> v(n,0);
         res[start]=1;
-        int f=0;
-        
         // well mark my word , you are getting problem in marking visited array, that is never gonna resolve to you by this method.
         // good luck mate , wa coming
         // after this modification , i.e calcuating degree of end , i am sure that it will get accepted.
+        // finally got the mistake , there is no need to maintain visited array , all we need to check and push only when it is greter , this will terminate a lot of call nd this is what real bfs is
+        // nd other mistake of using doble instead of int.
+        // period.
         int g1=0;
         while(!q.empty()){
             auto x=q.front();
             q.pop();
             for(auto &it:g[x]){
                 double yy=res[x]*it.second;
-                cout<<it.second;
                 if(res[it.first]<yy){
                     res[it.first]=yy;
                     q.push(it.first);
                 }
-                // v[it.first]=1;
             }
         }
         return res[end];
