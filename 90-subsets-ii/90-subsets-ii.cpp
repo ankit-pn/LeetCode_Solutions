@@ -4,6 +4,7 @@ public:
         sort(arr.begin(),arr.end());
         // got falied here , nd doning sorting with the hope that it will get accpeted .
         // final bet will got acceoted
+        // accepted, periods.
        auto p= dfs(arr,arr.size()-1);
         set<vector<int>> ans;
         for(auto &it:p)
