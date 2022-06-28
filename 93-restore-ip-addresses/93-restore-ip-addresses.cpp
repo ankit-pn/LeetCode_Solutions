@@ -86,5 +86,6 @@ public:
             ans.push_back(it);
         return ans;
         // submitting right now , it has to be accepted
+        // accepted. periods.
     }
 };
