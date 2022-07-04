@@ -29,16 +29,18 @@ public:
             {
                
                 while(!st.empty() && st.top()=="#"){
-                     int c=0;
-                while(st.top()=="#"){
+                //      int c=0;
+                // while(st.top()=="#"){
+                //     st.pop();
+                //     c++;
+                // }
+                // while(c--){
+                //     st.pop();
+                //     if(c>0 && st.size()==0)
+                //     return 0;
+                // }
                     st.pop();
-                    c++;
-                }
-                while(c--){
                     st.pop();
-                    if(c>0 && st.size()==0)
-                    return 0;
-                }
                 }
                 
                 st.push("#");
