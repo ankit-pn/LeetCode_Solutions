@@ -31,6 +31,7 @@ public:
         inorder(root->left);
         // well first time i have to find larger element nd second time i have to find smaller element.
         // thats all we need , hence once we get prev nd second time root.
+        // well remove = from prev->val>=root->val in both of cases.
         if(!f && prev->val>root->val)
             f=prev;
         // you have used eles if , i mean why.
