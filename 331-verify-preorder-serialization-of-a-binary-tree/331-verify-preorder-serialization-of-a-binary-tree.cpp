@@ -27,22 +27,10 @@ public:
             }
             else
             {
-               
                 while(!st.empty() && st.top()=="#"){
-                //      int c=0;
-                // while(st.top()=="#"){
-                //     st.pop();
-                //     c++;
-                // }
-                // while(c--){
-                //     st.pop();
-                //     if(c>0 && st.size()==0)
-                //     return 0;
-                // }
                     st.pop();
                     st.pop();
                 }
-                
                 st.push("#");
             }
             i += 2;
@@ -67,7 +55,6 @@ public:
             }
             i++;
             st.push(to_push);
-            // cout<<i+1<<"\n";
         }
     }
     return st.size()==1&&st.top()=="#"&&i==n+1;
