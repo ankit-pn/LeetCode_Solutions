@@ -29,13 +29,10 @@ public:
         //
         if(accumulate(gas.begin(),gas.end(),0)<accumulate(cost.begin(),cost.end(),0)) return -1;
 
-        int sum=0,n=gas.size(),sum1=0;
-        for(int i=0;i<n;i++){
+        int sum=0,n=gas.size();
+        for(int i=0;i<n;i++)
             gas[i]=gas[i]-cost[i];
-            if(gas[i]<0)
-            sum1+=gas[i];
-        }
-        cout<<sum<<" ";
+
         int start=0,ans=0,mx=0;
         for(int i=0;i<2*n;i++){
             sum+=gas[i%n];
