@@ -30,23 +30,39 @@ public:
         if(accumulate(gas.begin(),gas.end(),0)<accumulate(cost.begin(),cost.end(),0)) return -1;
 
         int sum=0,n=gas.size();
-        for(int i=0;i<n;i++)
+//         for(int i=0;i<n;i++)
+//             gas[i]=gas[i]-cost[i];
+
+//         int start=0,ans=0,mx=0;
+//         for(int i=0;i<2*n;i++){
+//             sum+=gas[i%n];
+//             if(sum<0){
+//                 start=i+1;
+//                 sum=0;
+//             }
+//             // this is beauty of kadane we have to update the value everytime.
+//             if(sum>mx){
+//                 mx=sum;
+//                 ans=start;
+//             }
+//         }
+          for(int i=0;i<n;i++)
             gas[i]=gas[i]-cost[i];
 
         int start=0,ans=0,mx=0;
-        for(int i=0;i<2*n;i++){
-            sum+=gas[i%n];
+        for(int i=0;i<n;i++){
+            sum+=gas[i];
             if(sum<0){
                 start=i+1;
                 sum=0;
             }
             // this is beauty of kadane we have to update the value everytime.
-            if(sum>mx){
-                mx=sum;
-                ans=start;
-            }
+            // if(sum>mx){
+            //     mx=sum;
+            //     ans=start;
+            // }
         }
         // you have no fucking idea now how to deal with -1 case
-       return ans;  
+       return start;  
     }
 };
