@@ -29,9 +29,6 @@ public:
         for(auto &it:mp){
             ivn.push_back(it.second);
         }
-        for(auto it:ivn){
-            cout<<it[0]<<" "<<it[1]<<"\n";
-        }
         sort(ivn.begin(),ivn.end());
         
         int i=1,end=ivn[0][1];
@@ -45,8 +42,6 @@ public:
             i++;
         }
         ans.push_back(end);
-        for(auto it:ans)
-            cout<<it<<" ";
         vector<int> res;
         res.push_back(ans[0]+1);
         for(int i=1;i<ans.size();i++){
