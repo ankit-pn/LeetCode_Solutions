@@ -12,6 +12,9 @@ public:
     int findMinFibonacciNumbers(int k) {
         if(k==0)
             return 0;
+        if(k==1)
+            return 1;
+        // cout<<nearest(19);
         return findMinFibonacciNumbers(k-nearest(k))+1;
     }
 };
