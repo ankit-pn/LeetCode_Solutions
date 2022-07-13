@@ -5,7 +5,6 @@ public:
         int i=0,n=costs.size();
         while(i<n && coins>=0){
             coins-=costs[i];
-            cout<<coins<<" ";
             i++;
         }
         return coins>=0 ? n : i-1;
