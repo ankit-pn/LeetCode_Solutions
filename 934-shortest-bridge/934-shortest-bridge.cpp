@@ -16,18 +16,17 @@ public:
         queue<pair<int,int>> q;
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
-                   cout<<arr[i][j]<<" ";
                 if(arr[i][j]==2){
                     q.push({i,j});
                 }
             }
-              cout<<"\n";
+     
         }
         bfs(arr,q);
         int ans=INT_MAX;
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
-                cout<<arr[i][j]<<" ";
+         
                 if(arr[i][j]==1){
                     if(i+1<n && arr[i+1][j]!=1 && arr[i+1][j]!=0){
                         ans=min(ans,arr[i+1][j]-arr[i][j]);
@@ -40,7 +39,7 @@ public:
                         ans=min(ans,arr[i][j-1]-arr[i][j]);
                 }
             }
-            cout<<"\n";
+  
         }
         return ans-1;
     }
